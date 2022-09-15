@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <title>Invoice Form</title>
+
+    <style>
+        table, td, th { 
+            border: 1px solid black
+        }
+    </style>
+
+    </head>
+
+    <body>
+
+        <div>
+            <h1 style="text-align: center">Invoice Form</h1>
+        </div>
+
+        <form action="https://www.google.com" target="_blank" method="GET">
+            <fieldset>
+                <legend style="font-weight: 900;">Invoice Details</legend>
+            <div>
+                <label>Invoice To:</label>
+                <input type="text" name="customer" id="customer_name" required maxlength="50" placeholder="Full Name" style="width:320px;"/>
+                
+            </div>
+            <div>
+                <label>Contact #:</label>
+                <input type="text" name="contact#:" id="customer_number" required maxlength="13" placeholder="+63"/>
+                <label>Date:</label>
+                <input type="date" name="date:" id="transaction_date" required/>
+            </div>
+            </fieldset>
+        
+            <table style="width:100%;">
+                <thead style="background-color: darksalmon;">
+                    <tr>
+                        <th style="width:45%; text-align: center;">Item Decription</th>
+                        <th style="width:10%;">Qty</th>
+                        <th style="width:25%;">Unit Price</th>
+                        <th style="width:20%;">Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr> 
+                        <td style="height:50px"><textarea name="Item1" style="width: 100%; height: 100%;" maxlength="100"></textarea></td>
+                        <td style="height:50px"><input name="Qty_1" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                        <td style="height:50px"><input name="UnitPrice_1" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                        <td style="height:50px"><input name="Amount_1"type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                    </tr>
+                    <tr>
+                        <td style="height:50px"><textarea name="Item2" style="width: 100%; height: 100%;" maxlength="100"></textarea></td>
+                        <td style="height:50px"><input name="Qty_2" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                        <td style="height:50px"><input name="UnitPrice_2" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                        <td style="height:50px"><input name="Amount_2" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                    </tr>
+                    <tr>
+                        <td style="height:50px"><textarea name="Item3" style="width: 100%; height: 100%;" maxlength="100"></textarea></td>
+                        <td style="height:50px"><input name="Qty_3" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                        <td style="height:50px"><input name="UnitPrice_3"type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                        <td style="height:50px"><input name="Amount_3" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                    </tr>
+
+                    <tr>
+                        <td style="height:50px"><textarea name="Item4" style="width: 100%; height: 100%;" maxlength="100"></textarea></td>
+                        <td style="height:50px"><input name="Qty_4" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                        <td style="height:50px"><input name="UnitPrice_4" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                        <td style="height:50px"><input name="Amount_4" type="number" style="width:100%; height:100%;" maxlength="100"/></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" style="text-align: right;font-weight: 900; height:50px;">Subtotal</td>
+                        <td style="height:50px;"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" style="text-align: right;font-weight: 900; height:50px">VAT (12%)</td>
+                        <td style="height:50px;"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" style="text-align: right;font-weight: 900; height:50px">Total (₱)</td>
+                        <td style="height:50px;"></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            
+            <fieldset>
+                <legend style="font-weight: 900;">Additional Details</legend>
+                <div>
+                <label>Payment Method</label>
+                <select name="PaymentOptions" required>
+                    <option value="">--Select Payment Method--</option>
+                    <option value="Card">Debit/Credit Card</option>
+                    <option value="Paypal">Paypal</option>
+                    <option value="Gcash">Gcash</option>
+                    <option value="Paymaya">Paymaya</option>
+                    <option value="COD">Cash On Delivery</option>
+                    <option value="Shopee">ShopeePay</option>
+                </select>
+                </div>
+
+                <div>
+                    <input id="radio_1" type="radio" name="addresstype" value="1"/>
+                    <label for="radio_1">Home</label>
+                    <input id="radio_2" type="radio" name="addresstype" value="2"/>
+                    <label for="radio_2">Office</label>
+                </div>
+            </fieldset>
+
+                <div>
+                    <textarea 
+                        name="DeliveryAddress" 
+                        style="width: 500px; height: 100px;" 
+                        maxlength="500" 
+                        placeholder="Delivery Address">
+                    </textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Submit"/>
+                </div>
+        </form>
+
+    </body>
+</html>
