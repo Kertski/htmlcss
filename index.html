@@ -1,10 +1,317 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My First HTML Page</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        Welcome to my first HTML page!
-    </body>
-</html>
+<head>
+    <title>My Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="javascript"></script>
+
+    <style>
+            .row .col {
+                padding: 3;
+                margin: 3;
+                background-color: rgb(54, 4, 134);
+                border: none;
+                width:300px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            img, svg {
+                margin-bottom: 1rem;
+            }
+
+
+            .work-education {
+                color: white;
+                text-align: center;
+            }
+
+            .work-education .row .col.text-end {
+                    border-right: 4px solid yellow;
+
+                }
+
+            .work-education .row .col.order-last {
+                    border-left: 4px solid yellow;
+                }
+
+            .col.text-end::after,
+            .col.order-last::after{
+                content: '*';
+                font-size: 42px;
+                color: yellow;
+                position: relative;
+                right: -28px;
+                bottom: 36px;
+            
+            }
+
+
+            .col.order-last::after{
+                left: -28px;
+            }
+
+
+            @media screen  and (max-width:768px) {
+
+                .work-education .row .col {
+                    display: none;
+                }
+
+                .work-education .row .col.text-end,
+                .work-education .row .col.order-last {
+                    display: block;
+                    text-align: center !important;
+                    margin-bottom: 30px;
+                    border-left: none;
+                    border-right: none;
+                }
+
+                .col.text-end::after,
+                .col.order-last::after {
+                content: none;    
+                }
+            }
+    </style>
+
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutme">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home" class="banner">
+            <h1>Kert Yaswa Moralda</h1>
+            <h2>Fullstack Web Developer</h2>
+            <img class= "rounded-circle float-end" src="D:\Kodego\htmlcss\images\Lion.png" height="250px" width="250px" style="position:relative; top:-172px; right: 50px;"/>
+        </section>
+
+        <section id= "aboutme" class="about-me">
+
+            <h3>About Me</h3>
+            
+            <div>
+                <p> I am a multi-skilled freelancer with a passion for upscaling businesses through website design, store management, ads management, and customer service. I have 1 year of experience as a Virtual Assistant for local and international businesses helping them strategize, boost their social media presence, upgrade their website, and boost their sales. I am a great team player, fast-working with a sense of precision and quality. I love challenges and can work under pressure.
+                </p>
+                <p>
+                    I love to read books about psychology, science, and astronomy. In my free time, I watch anime, cuddle with my dog, play guitar and online games as well.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="portfolio">
+            <div class="container" style="position:static ;">
+                <h3 class="text-center">My Portfolio</h3>
+                <div class="justify-content-center row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-6 g-4">
+                    <div class="col">
+                        <div class="card mb-3 mt-3 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title">Sunset</h4>
+                                <img src="D:\Kodego\htmlcss\images\1.png" style="max-height: 230px;">
+                                <p>Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-3 mt-3 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title">Moon</h4>
+                                <img src="D:\Kodego\htmlcss\images\2.png" style="max-height: 230px;">
+                                <p>The Moon is Earth's only natural satellite. Together with Earth it forms the Earth–Moon satellite system. It is about one-quarter of Earth in diameter (comparable to the width of Australia).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-3 mt-3 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title">Venus</h4>
+                                <img src="D:\Kodego\htmlcss\images\3.png" style="max-height: 230px;">
+                                <p>Venus is the 2nd planet from the Sun and is named after the Roman goddess of love and beauty. It's the brightest natural object in Earth's night sky after the Moon.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-3 mt-3 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title">Mars</h4>
+                                <img src="D:\Kodego\htmlcss\images\4.png" style="max-height: 230px;">
+                                <p>Mars is the 4th planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In the English language, Mars is named for the Roman god of war.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-3 mt-3 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title">Jupiter</h4>
+                                <img src="D:\Kodego\htmlcss\images\5.png" style="max-height: 230px;">
+                                <p>Jupiter is the 5th planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-3 mt-3 h-100" >
+                            <div class="card-body">
+                                <h4 class="card-title">Saturn</h4>
+                                <img src="D:\Kodego\htmlcss\images\6.png" style="max-height: 230px;">
+                                <p>Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id= "experience" class="work-education">
+            <div class="container">
+                <h3>Work Experience</h3>
+                <div class="row">
+                    <div class="col text-end" style="text-align: right;">
+                        <h4>Kings Sublimation And Sportswear (Part-time)</h4>
+                        <div>Facebook Media Buyer</div>
+                        <div>April 2020 - August 2022</div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col order-last" style="text-align: left;">
+                        <h4>DezignPop</h4>
+                        <div>Virtual Assistant</div>
+                        <div>August 2021 - March 2022</div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col text-end" style="text-align:right;">
+                        <h4>Wizbang Int.</h4>
+                        <div>Game Tester</div>
+                        <div>July 2021 - October 2021</div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+
+           
+
+        </section>
+
+        <footer id="#contact">
+
+                <a href="https://www.facebook.com/kert.yasua" target="_blank"><img src="D:\Kodego\htmlcss\images\FBLogo.png" style="max-height: 20px;"></a>
+                <a href="https://www.linkedin.com/in/kert-yaswa-moralda-2979a0250/" target="_blank"><img src="D:\Kodego\htmlcss\images\LinkedLogo.png" style="max-height: 23px;"></a>
+            
+        </footer>
+
+    </div>
+
+    <div class="container">
+    <form class="border p-5 m5 text-white rounded">
+        <div class="row">
+            <div class="col my-3">
+                <label class="form-label">First Name</label>
+                <input class="form-control" type="text" name="first-name">
+            </div>
+            <div class=" col my-3">
+                <label class="form-label">Last Name</label>
+                <input class="form-control" type="text" name="last-name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-3">
+                <label class="form-label">Email</label>
+                <input class="form-control" type="email" name="email">
+            </div>
+            <div class="col my-3">
+                <label class="form-label">Contact #</label>
+                <input class="form-control" type="text" name="contact_number">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-3">
+                <textarea class="form-control" name="address" placeholder="Add address here"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-3">
+                <input class="form-control" type=file />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-3">
+                <label class="form-label">Payment Method</label>
+                <select class="form-select" name="payemnt_method">
+                        <option>--</option>
+                        <option>Gcash</option>
+                        <option>Credit Card</option>
+                        <option>Paypal</option>
+                        <option>Cash On Delivery</option>
+                </select>
+            </div>
+            <div class="col my-3">
+                <label class="form-label">Amount</label>
+                <input class="form-control" type="number" name="amount">
+            </div>
+            <div class="col my-3">
+                <label class="form-label">VAT</label>
+                <input class="form-control" type="number" name="vat">
+            </div>
+            <div class="col my-3">
+                <input class="form-check-input" type="radio" name="radio" id="curr_usd">
+                <label class="form-label me-3">USD</label>             
+                <input class="form-check-input" type="radio" name="radio" id="curr_php">
+                <label class="form-label me-3">PHP</label>
+                <input class="form-check-input" type="radio" name="radio" id="curr_aud">
+                <label class="form-label me-3">AUD</label>
+            </div>
+        </div>
+        <h4>Add-Ons</h4>
+        <div class="row">
+            <div class="col my-3">
+                <input class="form-check-input" type="checkbox" name="courier" id="gc" />
+                <label for="gc" class="form-label">With Gift Card</label>
+                <input class="form-check-input" type="checkbox" name="courier" id="dc" />
+                <label for="dc" class="form-label">With 10% Discount</label>
+                <input class="form-check-input" type="checkbox" name="courier" id="eco" />
+                <label for="eco" class="form-label">In Ecobag</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-3">
+                <label class="form-label" type=file>Delivery Date</label>
+                <input class="form-control" type="date" name="delivery_date">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-3">
+                <label class="form-label" type=file>Range</label>
+                <input class="form-range" type="range" name="range" step="5" min="0" max="20">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-3">
+                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-warning">Warning</button>
+                <button class="btn btn-danger">Danger</button>
+            </div>
+        </div>
+        </div>
+    </form>
+    </div>
+
+</body>
+<html>
