@@ -2,75 +2,86 @@
 <html>
 <head>
     <title>My Resume</title>
+
     <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
     <div class="page-wrapper">
 
-        <header>Main Menu</header>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutme">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <section class="banner">
-            <h1>Kert Yaswa Moralda</h1>
-            <h2>Senior Web Developer</h2>
+        <section id="home" class="banner">
+            <h1 hidden>Kert Yaswa Moralda</h1>
+            <h2 hidden>Senior Web Developer</h2>
         </section>
 
-        <section class="about-me">
+        <section id= "aboutme" class="about-me">
 
             <h3>About Me</h3>
-
-            <div style="text-align: center;">
-
-                <img src="images/My FB Profile.jpg" height="100" width="100" alt="this is a sample image" title="Kert Yaswa Moralda">
-
-            </div>
             
             <div>
-                <p> I am a multi-skilled freelancer with a passion for upscaling businesses through website design, store management, ads management across social media platforms, and customer service. With 1 year of experience as a Virtual Assistant for local and international businesses, I have honed my skills in Graphic Design, and SEO. I am a great team player, fast-working with a sense of precision and quality. I love challenges and can work under pressure.
+                <p> I am a multi-skilled freelancer with a passion for upscaling businesses through website design, store management, ads management, and customer service. I have 1 year of experience as a Virtual Assistant for local and international businesses helping them strategize, boost their social media presence, upgrade their website, and boost their sales. I am a great team player, fast-working with a sense of precision and quality. I love challenges and can work under pressure.
                 </p>
                 <p>
-                    I love to read books about psychology, science, and astronomy. I watch anime in my free time and cuddle with my dog named Sharpy. I play guitar and online games as well.
+                    I love to read books about psychology, science, and astronomy. In my free time, I watch anime, cuddle with my dog, play guitar and online games as well.
                 </p>
             </div>
 
         </section>
 
-        <section class="my-portfolio">
+        <section id= "portfolio" class="my-portfolio">
 
             <h3>My Portfolio</h3>
 
-            <div class="d-flex">
-                <div class="d-inline">
-                    <h4>Project Title</h4>
-                    <p>Description></p>
+            <div class="d-flex with-direction">
+                <div class="d-inline" style="background-image:url(C:\Users\Admin\Downloads\Untitled_design\1);">
+                    <h4>Sunset</h4>
+                    <img src="D:\Kodego\htmlcss\images\1.png" style="max-height: 230px;">
+                    <p>Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind.</p>
                 </div>
                 <div class="d-inline">
-                    <h4>Project Title</h4>
-                    <p>Description></p>
+                    <h4>Moon</h4>
+                    <img src="D:\Kodego\htmlcss\images\2.png" style="max-height: 230px;">
+                    <p>The Moon is Earth's only natural satellite. Together with Earth it forms the Earth–Moon satellite system. It is about one-quarter of Earth in diameter (comparable to the width of Australia).</p>
                 </div>
                 <div class="d-inline">
-                    <h4>Project Title</h4>
-                    <p>Description></p>
+                    <h4>Venus</h4>
+                    <img src="D:\Kodego\htmlcss\images\3.png" style="max-height: 230px;">
+                    <p>Venus is the 2nd planet from the Sun and is named after the Roman goddess of love and beauty. It's the brightest natural object in Earth's night sky after the Moon.</p>
                 </div>
                 <div class="d-inline">
-                    <h4>Project Title</h4>
-                    <p>Description></p>
+                    <h4>Mars</h4>
+                    <img src="D:\Kodego\htmlcss\images\4.png" style="max-height: 230px;">
+                    <p>Mars is the 4th planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In the English language, Mars is named for the Roman god of war. </p>
                 </div>
                 <div class="d-inline">
-                    <h4>Project Title</h4>
-                    <p>Description></p>
+                    <h4>Jupiter</h4>
+                    <img src="D:\Kodego\htmlcss\images\5.png" style="max-height: 230px;">
+                    <p>Jupiter is the 5th planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined.</p>
                 </div>
                 <div class="d-inline">
-                    <h4>Project Title</h4>
-                    <p>Description></p>
+                    <h4>Saturn</h4>
+                    <img src="D:\Kodego\htmlcss\images\6.png" style="max-height: 230px;">
+                    <p>Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth.</p>
                 </div>
+        </section>
 
-            </section>
+    
 
-        <section class="work-education">
-            ..
-        <div>
+        <section id= "experience" class="work-education">
+
             <h3>Educational Attainment</h3>
-        <ul>
+        <ul class="work-content">
             <li>KodeGo Web Development BootCamp</li>
                 <ol>
                     <li>August 2022 - December 2022</li>
@@ -80,18 +91,14 @@
                     <li>July 2019 - December 2019</li>
                 </ol>
         </ul>
-        </div>
 
         </section>
 
+        <footer id="#contact">
 
-        <footer>
-            <div>
-                <a href="https://www.facebook.com/kert.yasua" target="_blank">Facebook Profile</a>
-            </div>
-            <div>
-                <a href="https://www.linkedin.com/in/kert-yaswa-moralda-2979a0250/" target="_blank">Linkedin Profile</a>
-            </div>
+                <a href="https://www.facebook.com/kert.yasua" target="_blank"><img src="D:\Kodego\htmlcss\images\FBLogo.png" style="max-height: 20px;"></a>
+                <a href="https://www.linkedin.com/in/kert-yaswa-moralda-2979a0250/" target="_blank"><img src="D:\Kodego\htmlcss\images\LinkedLogo.png" style="max-height: 23px;"></a>
+            
         </footer>
 
     </div>

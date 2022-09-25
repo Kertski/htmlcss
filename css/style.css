@@ -8,7 +8,7 @@ body{
 
 .page-wrapper {
     margin: 0 auto 0 auto;
-    padding:15px 15px 15px 30px;
+    padding:15px 15px 15px 15px;
 }
 
 header {
@@ -35,7 +35,7 @@ header {
 h1{
     color: yellow;
     text-shadow: 500cm black;
-    padding-top: 120px;
+    padding-top: 150px;
     margin-left: 50px;
 }
 
@@ -50,8 +50,15 @@ h3 {
     margin: 40px;
 }
 
-section.about-me{
-    margin-top: 40px;
+section.about-me {
+    text-align: center;
+    align-items: center;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.portfolio {
+    font-size: 22px;
 }
 
 section.my-portfolio div.d-inline{
@@ -60,27 +67,18 @@ section.my-portfolio div.d-inline{
     background-color: rgb(46, 0, 105);
 }
 
-section.my-portfolio div.d-inline p {
-
-    margin: 0.5cm 0.2cm 0.5cm 0.2cm;
-
-}
 
 .work-content{
     color:  white;
     font-size: 17px;
 }
 
-.about-me p {
+.about-me {
     font-size: 17px;
     line-height: 21px;
     color: white;
-}
-
-img.about-me {
-    align-items: center;
     text-align: center;
-
+    align-items: center;
 }
 
 .d-none {
