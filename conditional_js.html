@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Problem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+
+    <body>
+    <div>
+    <input type="text" id="number" value="" placeholder="Number Only"/>
+    <button onclick="CheckNumber()">Check</button>
+
+    <div id="result"></div>
+
+    <input type="text" id="letter" value="" maxlength="1"/>
+    <button onclick="CheckLetter()">Check</button>
+    <div id="result2"></div>
+        <script>
+            function CheckNumber() {
+                let x= parseInt(document.getElementById("number").value);
+
+                if ((x % 2) == 0){(document.getElementById('number').value);
+                document.getElementById('result').innerHTML =  "Even Number";
+
+
+                }else {
+                document.getElementById('result').innerHTML = "Odd Number";
+                }
+            }
+
+            function CheckLetter() {
+                let a = document.getElementById("letter").value;
+
+                if (a == "a" || a == "e" || a == "i" || a == "o" || a == "u" ) { document.getElementById('result2').innerHTML =  "Vowel";
+
+
+                }else {
+                document.getElementById('result2').innerHTML = "Consonant";
+                }
+            }
+        </script>
+    </div>
+    </body>
+
+</html>
+
+
+
+
+
