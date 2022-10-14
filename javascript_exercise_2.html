@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script type="text/javascript" src="js/kodego.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> 
 
 </head>
 
@@ -43,7 +42,163 @@
 
         </div>
 
-        <script>
+        <div class="m-5">
+
+            <div class="container my-3">
+            <h3>Switch Case Calculator</h3>
+            <input type="text" value="" placeholder="First Number" name="first_number"/>
+            <input type="text" value="" placeholder="Second Number" name="second_number"/>
+            <div id="result5"></div>
+            <div class="container my-3" id="result2"></div>
+
+            </div>   
+            
+            <div class="container my-3">
+
+                <button class="button" data-operator="+" id="plus" onclick="doComputeValue(event)">+</button>
+                <button class="button" data-operator="-" id="minus" onclick="doComputeValue(event)">-</button>
+                <button class="button" data-operator="*" id="multiply" onclick="doComputeValue(event)">*</button>
+                <button class="button" data-operator="/" id="divide" onclick="doComputeValue(event)">/</button>
+                <button class="button" data-operator="=" id="equal" onclick="doComputeValue(event)">=</button>
+
+                <div id="result5"></div>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <h3>Get Week Name</h3>
+                <input type="date" onchange="getWeekDayName(event)"/>
+                <div id="result6"></div>
+            </div>
+
+            <div class="container">
+                <h3>Get Month Name</h3>
+                <input type="date" onchange="getMonthName(event)"/>
+                <div id="result7"></div>
+            </div>
+
+            <script>
+
+            function  getMonthName(e) {
+
+                let date = new Date(e.currentTarget.value);
+                let month = date.getMonth();
+
+                switch(month){
+                    case 0:
+                        document.getElementById("result7").innerHTML = "January";
+                        break;
+                    case 1:
+                        document.getElementById("result7").innerHTML = "February";
+                        break;
+                    case 2:
+                        document.getElementById("result7").innerHTML = "March";
+                        break;
+                    case 3:
+                        document.getElementById("result7").innerHTML = "April";
+                        break;
+                    case 4:
+                        document.getElementById("result7").innerHTML = "May";
+                        break;
+                    case 5:
+                        document.getElementById("result7").innerHTML = "June";
+                        break;
+                    case 6:
+                        document.getElementById("result7").innerHTML = "July";
+                        break;
+                    case 7:
+                        document.getElementById("result7").innerHTML = "August";
+                        break;
+                    case 8:
+                        document.getElementById("result7").innerHTML = "September";
+                        break;
+                    case 9:
+                        document.getElementById("result7").innerHTML = "October";
+                        break;
+                    case 10:
+                        document.getElementById("result7").innerHTML = "November";
+                        break;
+                    case 11:
+                        document.getElementById("result7").innerHTML = "December";
+                        break;
+                    default:
+                        document.getElementById("result7").innerHTML = "Unknown date value";
+                        break;
+                }
+            }
+
+            function getWeekDayName(e) {
+                let date = new Date(e.currentTarget.value);
+                let day = date.getDay();
+
+                switch(day){
+                    case 0:
+                        document.getElementById("result6").innerHTML = "Sunday";
+                        break;
+                    case 1:
+                        document.getElementById("result6").innerHTML = "Monday";
+                        break;
+                    case 2:
+                        document.getElementById("result6").innerHTML = "Tuesday";
+                        break;
+                    case 4:
+                        document.getElementById("result6").innerHTML = "Wednesday";
+                        break;
+                    case 5:
+                        document.getElementById("result6").innerHTML = "Thursday";
+                        break;
+                    case 6:
+                        document.getElementById("result6").innerHTML = "Friday";
+                        break;
+                    case 7:
+                        document.getElementById("result6").innerHTML = "Saturday";
+                        break;
+                    default:
+                        document.getElementById("result6").innerHTML = "Unknown date value";
+                        break;
+                }
+            }
+
+            function doComputeValue(e) {
+
+                document.getElementById("plus" , "minus" , "multiply", "divide" , "equal").onclick = function(e) {
+
+                let operator = e.currentTarget.getAttribute("data-operator");
+                let number_one = parseInt(document.getElementsByName("first_number")[0].value);
+                let number_two = parseInt(document.getElementsByName("second_number")[0].value);
+
+                switch(operator){
+                    
+                    case "+": 
+                        document.getElementById("result5").innerHTML = number_one + number_two;
+                        break;
+
+                    case "-": 
+                        document.getElementById("result5").innerHTML = number_one - number_two;
+                        break;
+
+                    case "*": 
+                        document.getElementById("result5").innerHTML = number_one * number_two;
+                        break;
+
+                    case "/": 
+                        document.getElementById("result5").innerHTML = number_one / number_two;
+                        break;
+
+                    default:
+                        document.getElementById("result5").innerHTML ="Unknown operation"
+                        break;
+
+                    }
+
+                    }
+                   
+            
+       
+
+
+
             function CheckLetter() {
 
                 let letter = (document.getElementById("letter").value).toLowerCase ();
@@ -106,16 +261,9 @@
             let number1 = parseInt(document.getElementById("number1").value);
             let number2 = parseInt(document.getElementById("number2").value);
 
-            document.getElementById('result2').innerHTML = "Please Click Operation to Use";
+            document.getElementById('result2').innerHTML = "?";
 
-}
-
-            
-
-
-            
-
-
+            }
 
         </script>
 
