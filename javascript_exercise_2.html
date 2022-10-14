@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Machine Problem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="js/kodego.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> 
+
+</head>
+
+    <body>
+    <div>
+        <div class="m-5">
+
+            <div class="container">
+            <h3>Machine Problem 1</h3>
+            <input type="text" id="letter" value="" maxlength="1"/>
+            <button onclick="CheckLetter()">Check</button>
+            <div id="result"></div>
+            </div>
+            
+        </div>
+
+        <div class="m-5">
+
+            <div class="container my-3">
+            <h3>Machine Problem 2</h3>
+            <input type="text" id="number1" value="" placeholder="First Number"/>
+            <input type="text" id="number2" value="" placeholder="Second Number"/>
+            <div id="result2"></div>
+            </div>
+
+            <div class="container my-3">
+            <button onclick="Addition()">+</button>
+            <button onclick="Subtraction()">-</button>
+            <button onclick="Multiplication()">*</button>
+            <button onclick="Division()">/</button>
+            <button onclick="Equal()">=</button>
+            </div>
+            <div class="container my-3" id="result2"></div>
+
+        </div>
+
+        <script>
+            function CheckLetter() {
+
+                let letter = (document.getElementById("letter").value).toLowerCase ();
+             
+                switch (letter) {
+
+                    case "a":
+                    case "e": 
+                    case "i": 
+                    case "o": 
+                    case "u":
+                    document.getElementById("result").innerHTML = "Vowel";
+                    break;
+                    default:
+                    document.getElementById("result").innerHTML = "Consonant";
+                }
+            
+            }
+
+            
+
+            function Addition() {
+
+                let number1 = parseInt(document.getElementById("number1").value);
+                let number2 = parseInt(document.getElementById("number2").value);
+
+            document.getElementById('result2').innerHTML = number1 + number2;
+                
+            }
+
+            function Subtraction() {
+
+                let number1 = parseInt(document.getElementById("number1").value);
+                let number2 = parseInt(document.getElementById("number2").value);
+
+            document.getElementById('result2').innerHTML = number1 - number2;
+
+            }
+
+            function Multiplication() {
+
+                let number1 = parseInt(document.getElementById("number1").value);
+                let number2 = parseInt(document.getElementById("number2").value);
+
+            document.getElementById('result2').innerHTML = number1 * number2;
+
+            }
+
+            function Division() {
+
+                let number1 = parseInt(document.getElementById("number1").value);
+                let number2 = parseInt(document.getElementById("number2").value);
+
+            document.getElementById('result2').innerHTML = number1 / number2;
+
+            }
+
+            function Equal() {
+
+            let number1 = parseInt(document.getElementById("number1").value);
+            let number2 = parseInt(document.getElementById("number2").value);
+
+            document.getElementById('result2').innerHTML = "Please Click Operation to Use";
+
+}
+
+            
+
+
+            
+
+
+
+        </script>
+
+
+    </div>
+
+    </body>
+
+</html>
+
+
+
+
+

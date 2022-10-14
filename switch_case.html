@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch Case</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="js/kodego.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> 
+</head>
+
+    <body>
+    <div>
+    <input type="number" id="number" value="" placeholder="Number Only"/>
+    <button onclick="CheckNumber()">Check</button>
+
+    <div id="result"></div>
+
+    <input type="text" id="letter" value="" maxlength="1"/>
+    <button onclick="CheckLetter()">Check</button>
+    <div id="result2"></div>
+
+    <div class="container my-5">
+    <h1>Switch Case</h1>
+    <input type="text" id="flower_name" value="" onchange="getFlowerColor()"/>
+    <div id="result3"></div>
+    </div>
+
+    
+    <div class="container my-5">
+        <h1>Switch Case - Month Days</h1>
+        <input type="text" id="month_name" value="" onchange="getMonthDays()"/>
+        <div id="result4"></div>
+        </div>
+
+    <h3>Switch Case</h3>
+        <script>
+            function CheckNumber() {
+                let x= parseInt(document.getElementById("number").value);
+
+                if ((x % 2) == 0){(document.getElementById('number').value);
+                document.getElementById('result').innerHTML =  "Even Number";
+
+
+                }else {
+                document.getElementById('result').innerHTML = "Odd Number";
+                }
+            }
+
+            function CheckLetter() {
+                let a = document.getElementById("letter").value; 
+                // let a = (document.getElementById("letter").value).toLowerCase ();
+
+                if (a == "a" || a == "e" || a == "i" || a == "o" || a == "u" || a == "A" || a == "E" || a == "I" || a == "O" || a == "U" ) { document.getElementById('result2').innerHTML =  "Vowel";
+
+
+                }else {
+                document.getElementById('result2').innerHTML = "Consonant";
+                }
+            }
+
+            
+
+            function getFlowerColor() {
+
+            let flower = (document.getElementById("flower_name").value).toLowerCase ();
+
+            switch(flower){
+                case "rose":
+                    document.getElementById("result3").innerHTML = "Roses are red";
+                    break;
+                case "violet":
+                    document.getElementById("result3").innerHTML = "Violets are Blue";
+                    break;
+                case "sunflower":
+                    document.getElementById("result3").innerHTML = "Sunflowers are Yellow";
+                    break;  
+                default:
+                    document.getElementById("result3").innerHTML = "Unknown flower color"; 
+            }
+
+            /*
+
+            "if nase external ang code na reusable"
+
+            function onkeyupHandler () {
+                let flower = document.getElementById("flower_name").value;
+                document.getElemtBy("result3").innerHTML = flower + "s are" + getFlowerColor(flower);
+            }
+
+
+            */
+        }
+
+            function getMonthDays () {
+                document.getElementById("result4").innerHTML = getCalendarMonthDays (document.getElementById("month_name").value);
+            }
+
+            switch(x){
+
+                case 1:
+                case 3:
+                case 5:
+                case 15:CheckLetter
+                    // do statement
+                    break;
+                case 2:
+                    // do statement
+                    break;                  
+                case 4:
+                    // do statement
+                    break;
+
+                case 6:
+                    // do statement
+                    break;
+                case 8:
+                case 9:
+                    // do statement
+                    break;
+                case 12:
+                    // do statement
+                    break;
+
+                default:
+                    // do statement
+                    break;               
+
+            }
+
+        </script>
+    </div>
+    </body>
+
+</html>
+
+
+
+
+

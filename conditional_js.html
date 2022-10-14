@@ -1,50 +1,87 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Machine Problem</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Javascript Conditions</title>
+    <meta name="viewport" content="width=device-width", initial-scale="1"/>
+    <script type="text/javascript" src="js/kodego.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> 
 </head>
 
-    <body>
-    <div>
-    <input type="text" id="number" value="" placeholder="Number Only"/>
-    <button onclick="CheckNumber()">Check</button>
-
-    <div id="result"></div>
-
-    <input type="text" id="letter" value="" maxlength="1"/>
-    <button onclick="CheckLetter()">Check</button>
-    <div id="result2"></div>
-        <script>
-            function CheckNumber() {
-                let x= parseInt(document.getElementById("number").value);
-
-                if ((x % 2) == 0){(document.getElementById('number').value);
-                document.getElementById('result').innerHTML =  "Even Number";
+<body>
 
 
-                }else {
-                document.getElementById('result').innerHTML = "Odd Number";
-                }
-            }
-
-            function CheckLetter() {
-                let a = document.getElementById("letter").value;
-
-                if (a == "a" || a == "e" || a == "i" || a == "o" || a == "u" ) { document.getElementById('result2').innerHTML =  "Vowel";
-
-
-                }else {
-                document.getElementById('result2').innerHTML = "Consonant";
-                }
-            }
-        </script>
+    <div class="container py-5">
+        <hi>Case 1</hi>
+    <input type="text" id="first_number" value="" placeholder="Input First Value">
+    <input type="text" id="second_number" value="" placeholder="Input Second Value">
+    <button onclick="Check1()">Check</button>
     </div>
-    </body>
+
+    <div class="container py-5">
+        <hi>Case 2</hi>
+    <input type="text" id="third_number" value="" placeholder="Input Third Value">
+    <input type="text" id="forth_number" value="" placeholder="Input Forth Value">
+    <button onclick="Check2()">Check</button>
+    <!-- onclick pwede ilagay sa image -->
+    <div id="result"></div>
+    <div id="result2"></div>
+    </div>
+    
+    
+ 
+    <script>
+
+        function Check1() {
+            let  value1 = parseInt(document.getElementById('first_number').value);
+            let  value2 = parseInt(document.getElementById('second_number').value);
+
+        if (value1 == value2) {
+            document.write("Value 1 is equal to Value 2");
+        }
+
+        else if (value1 >= value2) {
+            document.write("Value 1 is greater than Value 2");
+        }
+
+        else {
+            document.write("value 1 is less than Value 2");
+        }
+
+        }
+
+        //parseInt - convert the variable into an integer
+
+        function Check2() {
+            let  value1 = parseInt(document.getElementById('third_number').value);
+            let  value2 = parseInt(document.getElementById('forth_number').value);
+
+        if (value1 == value2) {
+            document.getElementById('result').innerHTML = "Value "+ value1 + " is equal to " + value2;
+        }
+
+        else if (value1 >= value2) {
+            document.getElementById('result').innerHTML = "Value "+ value1 + " is greater than " + value2;
+        }
+
+        else {
+            document.getElementById('result').innerHTML = "Value "+ value1 + " is less than " + value2;
+        }
+
+        document.getElementById('result2').innerHTML = value1 + value2 + " is the sum of the given values.";
+
+        // document.getElementById('result2').innerHTML ="Total: " + (value1 + value2);
+
+        }
+
+        let x = 10;
+        let y = 20;
+        
+    </script>
+
+    
+
+</body>
 
 </html>
-
-
-
-
-
