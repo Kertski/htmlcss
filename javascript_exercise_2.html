@@ -77,6 +77,8 @@
                 <input type="date" onchange="getMonthName(event)"/>
                 <div id="result7"></div>
             </div>
+        
+        </div>
 
             <script>
 
@@ -142,16 +144,16 @@
                     case 2:
                         document.getElementById("result6").innerHTML = "Tuesday";
                         break;
-                    case 4:
+                    case 3:
                         document.getElementById("result6").innerHTML = "Wednesday";
                         break;
-                    case 5:
+                    case 4:
                         document.getElementById("result6").innerHTML = "Thursday";
                         break;
-                    case 6:
+                    case 5:
                         document.getElementById("result6").innerHTML = "Friday";
                         break;
-                    case 7:
+                    case 6:
                         document.getElementById("result6").innerHTML = "Saturday";
                         break;
                     default:
@@ -161,8 +163,6 @@
             }
 
             function doComputeValue(e) {
-
-                document.getElementById("plus" , "minus" , "multiply", "divide" , "equal").onclick = function(e) {
 
                 let operator = e.currentTarget.getAttribute("data-operator");
                 let number_one = parseInt(document.getElementsByName("first_number")[0].value);
@@ -268,7 +268,7 @@
         </script>
 
 
-    </div>
+        </div>
 
     </body>
 
