@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Machine Problem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="js/kodego.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+    <body>
+
+        <div id="result"></div>
+
+        <script>
+
+            let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
+
+            function countconsecutiveCalue(list, consecutive=2){
+                let prevNumber = 0;
+                let totalConsecutive = 0;
+                for(let i=0; i<number.length; i++){
+                    if (prevNumber == list[i]){
+                        totalConsecutive++;
+                    }
+                    prevNumber = list[i]
+                }
+
+                return totalConsecutive;
+            }
+            
+
+
+                console.log(dataCount);
+
+                document.getElementById ("result").innerHTML += "<br>";
+                
+ 
+        </script>
+
+    </body>
+
+</html>

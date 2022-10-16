@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Machine Problem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="js/kodego.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+    <body>
+
+        <script>
+
+            let staff = [
+                {name: "Oliver Queen", title: "CEO", gender: "male", age: 38, languages: ["english", "spanish"]}, 
+                {name: "Ben Hur", title: "Security consultant", gender: "male", age: 25, languages: ["latin", "italian"]}, 
+                {name: "Jessica Alba", title: "Admin Assistant", gender: "female", age: 23, languages: ["english", "spanish"]}, 
+                {name: "Pepper Piper", title: "Quality Assurance", gender: "female", age: 32, languages: ["english", "spanish"]},
+                {name: "Red Sullivan", title: "Project Manager", gender: "male", age: 27, languages: ["russian", "english"]},
+                {name:"Juan Dela Cruz", title: "Manager", age: 24, gender: "male", languages: ["russian", "french"]},
+                {name:"Anna Salvador", title: "Junior Dev", age: 21, gender: "female", languages: ["english", "french"]},
+                {name:"Mark Bautista", title: "Senior Fullstack Dev", age: 28, gender: "male", languages: ["russion", "spanish"]},
+                {name:"Micheal Garcia", title: "CEO", age: 40, gender: "male", languages: ["english", "latin"]}
+            ];
+
+            
+            let ageCount = 0;
+            counter = 0;
+            while(counter < staff.length){
+
+                if(staff[counter].age >= 30){
+                    ageCount++;
+                }
+                counter++;
+            }
+
+            console.log(ageCount);
+            
+
+            let staffLanguage=0;
+            counter = 0;
+            while (counter < staff.length) {
+
+            let cnt=0;
+            while (cnt<staff[counter].languages.length){
+
+                if(staff[counter].languages[cnt] == "spanish" ){
+                    
+                    staffLanguage++;
+                }
+
+                cnt++;
+            }
+
+                counter++;
+            }
+
+            console.log(staffLanguage);
+ 
+            //shortcut 
+
+            function getStaffCount(key, value){
+                let dataCount = 0
+                let i = 0;
+                while(i < staff.length) {
+                    if(key == "age"){
+                        if (staff[i][key] == value){
+                            dataCount++;
+    
+                        }
+                    }else if (key == "languages"){
+                        let l = 0;
+                        while (l < staff[i].languages.length){
+                            if (staff[i].languages[l] == value){
+                                dataCount++
+                            }
+
+                            l++
+                        }
+                    }else{
+                        if(staff[i][key] == value){
+                            dataCount++
+                        }
+                    }
+                    i++;
+                    
+                }
+                return dataCount;
+
+            }
+ 
+            /* "with operators"
+
+            function getStaffCount(key, value, operator="="){
+                let dataCount = 0
+                let i = 0;
+                while(i < staff.length) {
+                    if(key == "age"){
+                        if (operator == ">" && staff[i][key] > value){
+                            dataCount++;
+                        }else if(operator == "<" && staff [i][key] < value){
+                            dataCount++;
+                        }else if(operator == ">=" && staff[i][key] >= value){
+                            dataCount++;
+                        }else if(operator == "<=" && staff[i][key] <= value) {
+                            dataCount++;
+                        }else if(staff[i][key] == value){
+                            dataCount++;
+                        }
+                    }else if (key == "languages"){
+                        let l = 0;
+                        while (l < staff[i].languages.length){
+                            if (staff[i].languages[l] == value){
+                                dataCount++
+                            }
+
+                            l++
+                        }
+                    }else{
+                        if(staff[i][key] == value){
+                            dataCount++
+                        }
+                    }
+                    i++;
+                    
+                }
+                return dataCount;
+
+            }
+
+            console.log("Staff aged 25 above: " + staffAgeCount)
+
+
+            */
+
+            let ceoCount = getStaffCount('title', 'CEO'); 
+            let languagesCount = getStaffCount('languages', 'spanish');
+            let staffAgeCount = getStaffCount ('age' , 25, ">")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+            console.log(getStaffCount('age', 40) + ": Number of Staffs Aged 40");
+            console.log("Male Staffs: " + getStaffCount('gender', 'male'))
+            console.log(ceoCount)
+            console.log("Spanish-speaking Staffs: " + languagesCount)
+
+            "SWITCH CASE"
+
+            function getStaffCount(key, value, operator="="){
+                let dataCount = 0
+                let i = 0;
+                while(i < staff.length) {
+                    switch(key) {
+                        case "age":
+                            if (operator == ">" && staff[i][key] > value){
+                                dataCount++;
+                            }else if(operator == "<" && staff [i][key] < value){
+                                dataCount++;
+                            }else if(operator == ">=" && staff[i][key] >= value){
+                                dataCount++;
+                            }else if(operator == "<=" && staff[i][key] <= value) {
+                                dataCount++;
+                            }else if(staff[i][key] == value){
+                                dataCount++;
+                            }
+                            break;
+                        case "languages": 
+                            let l = 0;
+                            while (l < staff[i].languages.length){
+                                if (staff[i].languages[l] == value){
+                                    dataCount++
+                                }
+
+                                l++
+                            }
+                            break;
+
+                        default:
+
+                            if(staff[i][key] == value){
+                                dataCount++
+                            }
+                            break;
+                        }
+                        i++;
+                    
+                }
+                return dataCount;
+
+            }
+
+
+
+        
+        </script>
+
+    </body>
+
+</html>
