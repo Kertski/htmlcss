@@ -11,6 +11,8 @@
 
     <body>
 
+        <div id="result7"></div>
+
         <script>
 
             let staff = [
@@ -144,7 +146,22 @@
             console.log(ceoCount)
             console.log("Spanish-speaking Staffs: " + languagesCount)
 
-            "SWITCH CASE"
+            let dataCount = 0;
+                
+                for (let i=0; i < staff.length; i++) {
+                    if (staff[i].age > 30) {
+                        dataCount++
+                    }
+                }
+
+            console.log (dataCount)
+    
+
+                for (let i=0; i <=10; i++){
+                    console.log("number " + i)
+                }
+
+            // SWITCH CASE
 
             function getStaffCount(key, value, operator="="){
                 let dataCount = 0
@@ -188,11 +205,54 @@
                 return dataCount;
 
             }
+ 
+            // for loop
 
+            function getStaffCountFor(key, value, operator="="){
+                let dataCount = 0
+                for (let i=0; i < staff.length; i++){
+                    switch(key) {
+                        case "age":
+                            if (operator == ">" && staff[i][key] > value){
+                                dataCount++;
+                            }else if(operator == "<" && staff [i][key] < value){
+                                dataCount++;
+                            }else if(operator == ">=" && staff[i][key] >= value){
+                                dataCount++;
+                            }else if(operator == "<=" && staff[i][key] <= value) {
+                                dataCount++;
+                            }else if(staff[i][key] == value){
+                                dataCount++;
+                            }
+                            break;
+                        case "languages": 
+                            for (let l = 0; l <staff[i].language.length; l++) {
+                                if (staff[i].languages[l] == value){
+                                    dataCount++
+                                }
+                            }
+                            break;
 
+                        default:
 
+                            if(staff[i][key] == value){
+                                dataCount++
+                            }
+                            break;
+                        }
+                    
+                }
+                return dataCount;
+
+            }
+
+                incrementCountFor(1, 100, document.getElementById("result7"), 5);
+            
+                console.log("FOR " + getStaffCountFor('age', 40) + ": Number of Staffs Aged 40");
+                console.log("FOR Male Staffs: " + getStaffCountFor('gender', 'male'))
         
         </script>
+
 
     </body>
 

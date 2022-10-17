@@ -44,7 +44,6 @@ function getFlowerColor() {
             addComma = true;
             counter += increment;
         }
-    }
     
     function decrementCounter(counter, minvalue, targetDisplay, decrement=1){
         if(targetDisplay == null){
@@ -58,6 +57,21 @@ function getFlowerColor() {
             targetDisplay.innerHTML += counter;
             addComma = true;
             counter -= decrement;
+        }
+    }
+
+    }
+    function incrementCountFor(counter, maxvalue, targetDisplay, increment=1){
+        if(targetDisplay == null){
+            targetDisplay = document.body;
+        }
+        let addComma = false;
+        for(counter; counter<= maxvalue; counter += increment){
+            if(addComma){
+                targetDisplay.innerHTML += ", ";
+            }
+            targetDisplay.innerHTML += counter;
+            addComma = true;
         }
     }
     

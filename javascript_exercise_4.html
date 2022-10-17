@@ -17,25 +17,32 @@
 
             let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
 
-            function countconsecutiveCalue(list, consecutive=2){
+            function countConsecutiveValue(list, consecutive=2){
                 let prevNumber = 0;
                 let totalConsecutive = 0;
-                for(let i=0; i<number.length; i++){
+                let sequence = 1;
+                for(let i=0; i<list.length; i++){
                     if (prevNumber == list[i]){
-                        totalConsecutive++;
+                        sequence++;
                     }
-                    prevNumber = list[i]
+                    if (sequence == consecutive) {
+                        totalConsecutive++;
+                        sequence = 1;
+                        prevNumber = 0;
+                    }
+                    else{
+                        prevNumber = list[i];
+                    }
+
                 }
 
                 return totalConsecutive;
-            }
-            
 
+                }
 
-                console.log(dataCount);
-
-                document.getElementById ("result").innerHTML += "<br>";
-                
+            console.log(countConsecutiveValue(numbers));
+            console.log(countConsecutiveValue(numbers, 3));
+     
  
         </script>
 
