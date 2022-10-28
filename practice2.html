@@ -1,0 +1,65 @@
+<!DOCTYPE html>>
+<html>
+
+    <head>
+
+        <title>Machine Problem</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script type="text/javascript" src="js/kodego.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <input type="text" id="number1" placeholder="Input Value1" value=""/>
+
+        <button onclick="oddOrEven()">Check</button>
+
+        <div id="result"></div>
+
+        <br>
+
+        <input type="text" id="letterinput" placeholder="Input Letter" value="" maxlength="1"/>
+
+        <button onclick="vowelOrConsonant()">Check</button>
+
+        <div id="result2"></div>
+
+        <script>
+
+            function oddOrEven() {
+
+                let value1 = parseInt(document.getElementById("number1").value);
+
+                if (value1 % 2 == 0) {
+                    document.getElementById("result").innerHTML = "Even Number";
+                }else {
+                    document.getElementById("result").innerHTML = "Odd Number";
+                }
+
+            }
+
+            function vowelOrConsonant() {
+
+                let char = (document.getElementById("letterinput").value).toLowerCase();
+
+
+                if (char == "a" || char == "e" || char == "i" || char == "o" || char == "u") {
+
+                    document.getElementById("result2").innerHTML = "Letter " + char + " is a vowel.";
+
+                } else {
+
+                    document.getElementById("result2").innerHTML = "Letter " + char + " is a consonant.";
+                }
+
+            }
+
+
+
+        </script>
+
+    </body>
+
+</html>

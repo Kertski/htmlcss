@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Javascript Exercise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="js/kodego.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <script>
+
+        class Furniture {
+            constructor (type, wood){
+            this.type = type;
+            this.wood = wood;
+            }
+        }
+
+        class ColorStyle extends Furniture {
+            constructor (woodFinish, color){
+            super("Table", "Mahogany");
+            this.woodFinish = woodFinish;
+            this.color = color;
+            }
+
+        }
+
+        class PriceMinOrder extends ColorStyle {
+            constructor (price, minOrder){
+            super("Natural Varnish", "Brown");
+            this.price = price;
+            this.minOrder = minOrder;
+            }
+
+        }
+
+        let myTable = new PriceMinOrder ("1500","1");
+
+        document.write(myTable.wood);
+
+    </script>
+
+</body>
+
+</html>

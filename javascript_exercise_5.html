@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Javascript Exercise 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="js/kodego.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container py-5 my-5"> 
+        <label for="number" class= "h4"style="font-weight:500;">Next Number Divisible By 7</label><br>
+        <input type="number" placeholder="Type Any Number" id="number"/>
+        <button class="btn btn-primary" onclick="getNextNumber()">Check</button>
+    </div>
+
+        <input type="text" onkeyup="onKeyUpHandler(event)">
+        <div id="result"></div>
+
+    <script>
+
+        function  nextNumberDivisible(number) {
+
+            for (number;  number <= number + 7; number++) {
+            if (number % 7 == 0) {
+                return number;
+            }
+            }
+
+         }
+
+
+         let x = "1", "2", "3", "4", "5", "6"; 
+
+         x = x.slice (1, -2)
+
+         console.log(x)
+
+         
+    </script>
+
+</body>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
+</html>
